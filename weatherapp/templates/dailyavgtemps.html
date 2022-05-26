@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="UTF-8">
+	<title> Daily average temperatures </title>
+	<link rel="stylesheet" href="cssfiles/indexst.css">
+</head>
+
+<body>
+
+	{%for temperature in dailyavgtemps%}
+	<li>{{temperature.location}} {{temperature.avgtemps}} </li>
+	{% endfor %}
+
+</body>
+</html>
