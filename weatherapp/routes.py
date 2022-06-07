@@ -1,11 +1,13 @@
 from weatherapp import app
 from flask import render_template
+from weatherapp. models import currentcast
 import json
 
-@app.route('/')
+
+"""@app.route('/')
 def getindex():
     return render_template('index.html')
-
+"""
 
 # api for weather forecast per location
 @app.route('/api/<location>')
@@ -23,7 +25,7 @@ def getlocforecast(location):
 @app.route('/api/today/<location>')
 def gettodaysforecast(location):
 
-    dailycast = forecasthistory.query.filter_by(Location=location).all()
+    dailycast = dailycast.query.filter_by(Location=location).all()
     # remove sql alchemy key
     for instance in dailycast:
          instance.__dict__.pop('_sa_instance_state')
@@ -41,7 +43,7 @@ def student():
 
 
 
-
+"""
 
 @app.route('/api/averagetemp/')
 def average_temp():
@@ -60,4 +62,4 @@ def average_temp():
         avg_temps.append(temperature)
     return render_template('dailyavgtemps.html',dailyavgtemps = avg_temps)
 
-
+"""

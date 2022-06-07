@@ -4,7 +4,7 @@ import urllib
 
 
 app = Flask(__name__)
-
+print("The name of the app is {}".format(__name__))
 # set database location in flask config file
 params = urllib.parse.quote_plus('DRIVER={SQL Server};SERVER=MARCOS-PC;DATABASE=ForecastDB;Trusted_Connection=yes')
 app.config["SQLALCHEMY_DATABASE_URI"] = "mssql+pyodbc:///?odbc_connect=%s"%params
